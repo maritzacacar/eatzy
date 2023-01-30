@@ -1,0 +1,795 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Eat More Easy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+</head>
+
+<body>
+    <!-- Navbar Web -->
+    <nav class="container navbar navbar-expand-lg px-lg-0 px-3 mt-2 d-md-block d-none d-lg-block">
+        <div class="d-md-flex d-block justify-content-md-between align-items-center w-100">
+            <div class="d-flex align-items-center justify-content-between">
+                <a class="navbar-brand fw-bold fs-2" href="#"><img src="img/eatzy.png" width="90"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse d-md-flex" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0 d-flex">
+                    <li class="nav-item">
+                        <a class="nav-link fw-bold mx-2" href="#">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" href="#">Favorit</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" href="#">Produk</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link mx-2" href="#">Keranjang</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="collapse d-md-flex" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item me-2">
+                        <a class="btn btn-outline-primary px-4 py-2 text-dark mb-lg-0 mb-2 w-lg-auto w-100" href="#">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary px-4 py-2 mb-lg-0 mb-2 w-lg-auto w-100" href="#">Register</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar Web -->
+
+    <!-- Banner Web -->
+    <section class="banner mt-4">
+        <div class="container">
+            <div class="row d-none d-lg-block">
+                <div class="col-lg-12" data-aos="zoom-in">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active" data-bs-interval="3000">
+                                <img src="img/banner.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item" data-bs-interval="3000">
+                                <img src="img/banner2.png" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item" data-bs-interval="3000">
+                                <img src="img/banner3.png" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Banner Web -->
+
+
+    <!-- Alarm Makan Web -->
+    <div class="container">
+        <div class="row d-none d-lg-block px-3" style="margin-top: 80px;">
+            <h4 class="fw-bold text-center">Pengingat makan Anda</h4>
+            <div class="d-flex justify-content-center">
+                <div class="col-lg-6 mt-4">
+                    <div class=" alarm py-4 ps-4" style="background: #DBEAFF; border-radius: 20px; ">
+                        <div class="d-flex justify-content-between just">
+                            <div class="sarapan text-center">
+                                <h5 class="fw-bold ">Sarapan</h5>
+                                <p>07.30</p>
+                            </div>
+                            <div class="garis ">|</div>
+                            <div class="makan-siang text-center ">
+                                <h5 class="fw-bold ">Makan Siang</h5>
+                                <p>12.00</p>
+                            </div>
+                            <div class="garis ">|</div>
+                            <div class="makan-malam text-center pe-4">
+                                <h5 class="fw-bold">Makan Malam</h5>
+                                <p>20.00</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 pe-4">
+                            <div class="form-group ">
+                                <input type="text " name=" " id=" " class="form-control rounded-pill py-2 " placeholder="Mau makan apa hari ini? " style="font-size: 12px ">
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Alarm Makan Web-->
+
+    <!-- Kategori Web -->
+    <div class="container ">
+        <div class="row d-none d-lg-block px-3 py-4">
+            <section class="kategori ">
+                <div id="carouselExampleSlidesOnly " class="carousel slide " data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="row">
+                            <div class="col-lg-12" data-aos="fade-up" data-aos-delay="100">
+                                <h5 class="fw-bold" style="font-size: 24px;">Kategori</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item active" data-bs-interval="2000">
+                            <div class="carousel-one h-100">
+                                <div class="row mt-3">
+                                    <div class="col-3" data-aos="fade-up" data-aos-delay="200">
+                                        <a class="kategori-eatzy text-decoration-none" href="# ">
+                                            <div class="komponen-web">
+                                                <div class="gambar d-flex justify-content-center">
+                                                    <img src="img/kategoriweb1.png " width="110" />
+                                                </div>
+                                                <p class="tulisan-web text-center">Makanan</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-3" data-aos="fade-up" data-aos-delay="300">
+                                        <a class="kategori-eatzy text-decoration-none" href="# ">
+                                            <div class="komponen-web">
+                                                <div class="gambar d-flex justify-content-center">
+                                                    <img src="img/kategoriweb2.png " width="110" />
+                                                </div>
+                                                <p class="tulisan-web text-center">Minuman</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-3" data-aos="fade-up" data-aos-delay="400">
+                                        <a class="kategori-eatzy text-decoration-none" href="# ">
+                                            <div class="komponen-web">
+                                                <div class="gambar d-flex justify-content-center">
+                                                    <img src="img/kategoriweb3.png" width="110" />
+                                                </div>
+                                                <p class="tulisan-web text-center">Cemilan</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-3" data-aos="fade-up" data-aos-delay="500">
+                                        <a class="kategori-eatzy text-decoration-none" href="# ">
+                                            <div class="komponen-web">
+                                                <div class="gambar d-flex justify-content-center">
+                                                    <img src="img/kategoriweb4.png" width="110" />
+                                                </div>
+                                                <p class="tulisan-web text-center">Biskuit</p>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000 ">
+                            <div class="carousel-one">
+                                <div class="row mt-3">
+                                    <div class="col-3" data-aos="fade-up" data-aos-delay="600">
+                                        <a class="kategori-eatzy text-decoration-none" href="# ">
+                                            <div class="komponen-web">
+                                                <div class="gambar d-flex justify-content-center">
+                                                    <img src="img/kategoriweb5.png" />
+                                                </div>
+                                                <p class="tulisan-web text-center">zyPay</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-3" data-aos="fade-up" data-aos-delay="700">
+                                        <a class="kategori-eatzy text-decoration-none" href="# ">
+                                            <div class="komponen-web">
+                                                <div class="gambar d-flex justify-content-center">
+                                                    <img src="img/kategoriweb6.png" />
+                                                </div>
+                                                <p class="tulisan-web text-center">zyTips</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+        </div>
+    </div>
+    <!-- End Kategori Web -->
+
+
+    <!-- Buruan Pesan Web -->
+    <div class="container">
+        <div class="row d-none d-lg-block px-3 py-4">
+            <section class="kategori ">
+                <div id="carouselExampleSlidesOnly " class="carousel slide " data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="row mt-5">
+                            <div class="col-lg-12">
+                                <div class="d-flex">
+                                    <h5 class="fw-bold" style="font-size: 24px;">Buruan Pesan</h5>
+                                    <a href="">
+                                        <i class="fa fa-arrow-right fa-lg" style="margin-left: 900px; margin-top: 2px;"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item active" data-bs-interval="2000">
+                            <div class="carousel-one h-100">
+                                <div class="row mt-2">
+                                    <div class="col-4" data-aos="fade-up" data-aos-delay="100">
+                                        <a class="buruan-pesan-web text-decoration-none" href="#">
+                                            <div class="komponen-buruan-pesan-web">
+                                                <div class="overlay-gambar-web">
+                                                    <div class="gambar-buruan-pesan-web d-flex justify-content-center">
+                                                    </div>
+                                                </div>
+                                                <div class="love-1-web">
+                                                    <div class="icon-love-web">
+                                                        <i class="fa-regular fa-heart fa-lg text-white mt-3" style="margin-left: 8px;"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="konten-produk-buruan-pesan-web d-flex">
+                                                    <div class="produk-buruan-pesan-web">
+                                                        <h4>Ramen Miso</h4>
+                                                        <p>Sunter, Jakarta</p>
+                                                    </div>
+                                                    <div class="star-web">
+                                                        <i class="fas fa-star fa-2xs text-warning"></i>
+                                                        <i class="fas fa-star fa-2xs text-warning"></i>
+                                                        <i class="fas fa-star fa-2xs text-warning"></i>
+                                                        <i class="fas fa-star fa-2xs text-warning"></i>
+                                                        <i class="fas fa-star fa-2xs text-secondary"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="bawah-card d-flex">
+                                                        <div class="harga-web">
+                                                            <h5>Rp 38.000,00</h5>
+                                                            <p>HEMAT 15%</p>
+                                                        </div>
+                                                        <div class="button-detail-web">
+                                                            <a href="" class="btn-detail-web">Detail</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-4" data-aos="fade-up" data-aos-delay="100">
+                                        <a class="buruan-pesan-web text-decoration-none" href="#">
+                                            <div class="komponen-buruan-pesan-web">
+                                                <div class="overlay-gambar-web">
+                                                    <div class="gambar-buruan-pesan-2-web d-flex justify-content-center">
+                                                    </div>
+                                                </div>
+                                                <div class="love-web">
+                                                    <div class="icon-love-web">
+                                                        <i class="fa-regular fa-heart fa-lg text-dark mt-3" style="margin-left: 8px;"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="konten-produk-buruan-pesan-web d-flex">
+                                                    <div class="produk-buruan-pesan-web">
+                                                        <h4>Kopi Regaru</h4>
+                                                        <p>AEON Mall, Jakarta</p>
+                                                    </div>
+                                                    <div class="star-web">
+                                                        <i class="fas fa-star fa-2xs text-warning"></i>
+                                                        <i class="fas fa-star fa-2xs text-warning"></i>
+                                                        <i class="fas fa-star fa-2xs text-warning"></i>
+                                                        <i class="fas fa-star fa-2xs text-warning"></i>
+                                                        <i class="fas fa-star fa-2xs text-warning"></i>
+
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="bawah-card d-flex">
+                                                        <div class="harga-web">
+                                                            <h5>Rp 12.000,00</h5>
+                                                            <p>HEMAT 20RB</p>
+                                                        </div>
+                                                        <div class="button-detail-web-2">
+                                                            <a href="" class="btn-detail-web">Detail</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-4" data-aos="fade-up" data-aos-delay="100">
+                                        <a class="buruan-pesan-web text-decoration-none" href="#">
+                                            <div class="komponen-buruan-pesan-web">
+                                                <div class="overlay-gambar-web">
+                                                    <div class="gambar-buruan-pesan-3-web d-flex justify-content-center">
+                                                    </div>
+                                                </div>
+                                                <div class="love-web">
+                                                    <div class="icon-love-web">
+                                                        <i class="fa-regular fa-heart fa-lg text-dark mt-3" style="margin-left: 8px;"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="konten-produk-buruan-pesan-web d-flex">
+                                                    <div class="produk-buruan-pesan-web">
+                                                        <h4>Soto Ayam</h4>
+                                                        <p>Howitzer, Jakarta</p>
+                                                    </div>
+                                                    <div class="star-web">
+                                                        <i class="fas fa-star fa-2xs text-warning"></i>
+                                                        <i class="fas fa-star fa-2xs text-warning"></i>
+                                                        <i class="fas fa-star fa-2xs text-warning"></i>
+                                                        <i class="fas fa-star fa-2xs text-secondary"></i>
+                                                        <i class="fas fa-star fa-2xs text-secondary"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="bawah-card d-flex">
+                                                        <div class="harga-web">
+                                                            <h5>Rp 15.000,00</h5>
+                                                            <p>CASHBACK</p>
+                                                        </div>
+                                                        <div class="button-detail-web-3">
+                                                            <a href="" class="btn-detail-web">Detail</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+        </div>
+    </div>
+    <!-- Buruan Pesan Web -->
+
+
+
+
+
+
+
+
+
+    <!-- Bottom Navbar -->
+    <nav class="navbar navbar-light border-top navbar-expand d-md-none d-lg-none d-xl-none fixed-bottom rounded-pill mb-4 bg-primary p-2 mx-3">
+        <ul class="navbar-nav nav-justified w-100">
+            <li class="nav-item">
+                <a href="#" class="nav-link active bg-info rounded-pill nav-bottom" style="margin-left: 20px;">
+                    <img src="img/home.png" alt="" style="width: 25px;">
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link rounded-pill nav-bottom">
+                    <img src="img/wishlist.png" alt="" style="width: 25px;">
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link rounded-pill nav-bottom">
+                    <img src="img/menu.png" alt="" style="width: 25px;">
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link rounded-pill nav-bottom">
+                    <img src="img/cart.png" alt="" style="width: 25px;">
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link rounded-pill nav-bottom">
+                    <img src="img/profile.png" alt="" style="width: 25px;">
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- End Botoom Navbar -->
+
+    <!-- Header Responsive -->
+    <div class="container">
+        <div class="row d-block d-md-none d-lg-none d-xl-none">
+            <div class="clearfix py-2 header-profile fixed-top" style="background: #FAFAFA; height: 80px">
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="profile">
+                        <img src="img/profile-top.png" class="col-lg-6 float-md-end mb-3 ms-md-5 img-fluid" width="60px">
+                    </div>
+                    <div class="text">
+                        <h4>Halo, Selamat Datang 👋<br />
+                            <span class="">Rafa Maritza</span></h4>
+                    </div>
+                    <div class="img-notif py-2 px-2 me-3" style="border-radius: 50%; background: #B4D2FF;">
+                        <img src="img/notif.png" width="25px">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Header Responsive -->
+
+    <!-- Alarm Makan Responsive-->
+    <div class="container">
+        <div class="row d-block d-md-none d-lg-none d-xl-none px-3" style="margin-top: 120px;">
+            <div class=" alarm py-4 ps-4 " style="background: #DBEAFF; border-radius: 20px; ">
+                <div class="d-flex justify-content-between ">
+                    <div class="sarapan text-center ">
+                        <h5 class="fw-bold ">Sarapan</h5>
+                        <p>07.30</p>
+                    </div>
+                    <div class="garis ">|</div>
+                    <div class="makan-siang text-center ">
+                        <h5 class="fw-bold ">Makan Siang</h5>
+                        <p>12.00</p>
+                    </div>
+                    <div class="garis ">|</div>
+                    <div class="makan-malam text-center ">
+                        <h5 class="fw-bold ">Makan Malam</h5>
+                        <p>20.00</p>
+                    </div>
+                </div>
+                <div class="col-lg-12 ">
+                    <div class="form-group ">
+                        <input type="text " name=" " id=" " class="form-control rounded-pill py-2 " placeholder="Mau makan apa hari ini? " style="font-size: 12px ">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Alarm Makan Responsive -->
+
+    <!-- Kategori Responsive -->
+    <div class="container ">
+        <div class="row d-block d-md-none d-lg-none d-xl-none px-3 py-4">
+            <section class="kategori ">
+                <div id="carouselExampleSlidesOnly " class="carousel slide " data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <h5 class="fw-bold" style="font-size: 16px;">Kategori</h5>
+                            </div>
+                        </div>
+                        <div class="carousel-item active" data-bs-interval="2000">
+                            <div class="carousel-one h-100">
+                                <div class="row ">
+                                    <div class="col-3" data-aos="fade-up" data-aos-delay="100">
+                                        <a class="kategori-eatzy text-decoration-none" href="# ">
+                                            <div class="komponen">
+                                                <div class="gambar d-flex justify-content-center">
+                                                    <img src="img/makanan.png " />
+                                                </div>
+                                                <p class="tulisan text-center">Makanan</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-3" data-aos="fade-up" data-aos-delay="200">
+                                        <a class="kategori-eatzy text-decoration-none" href="# ">
+                                            <div class="komponen">
+                                                <div class="gambar d-flex justify-content-center">
+                                                    <img src="img/minuman.png ">
+                                                </div>
+                                                <p class="tulisan text-center">Minuman</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-3" data-aos="fade-up" data-aos-delay="300">
+                                        <a class="kategori-eatzy text-decoration-none" href="# ">
+                                            <div class="komponen">
+                                                <div class="gambar d-flex justify-content-center">
+                                                    <img src="img/snack.png" />
+                                                </div>
+                                                <p class="tulisan text-center">Cemilan</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-3" data-aos="fade-up" data-aos-delay="400">
+                                        <a class="kategori-eatzy text-decoration-none" href="# ">
+                                            <div class="komponen">
+                                                <div class="gambar d-flex justify-content-center">
+                                                    <img src="img/cookies.png" />
+                                                </div>
+                                                <p class="tulisan text-center">Biskuit</p>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000 ">
+                            <div class="carousel-one">
+                                <div class="row ">
+                                    <div class="col-3" data-aos="fade-up" data-aos-delay="100">
+                                        <a class="kategori-eatzy text-decoration-none" href="# ">
+                                            <div class="komponen">
+                                                <div class="gambar d-flex justify-content-center">
+                                                    <img src="img/zypay.png" />
+                                                </div>
+                                                <p class="tulisan text-center">zyPay</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-3" data-aos="fade-up" data-aos-delay="100">
+                                        <a class="kategori-eatzy text-decoration-none" href="# ">
+                                            <div class="komponen">
+                                                <div class="gambar d-flex justify-content-center">
+                                                    <img src="img/zytips.png" />
+                                                </div>
+                                                <p class="tulisan text-center">zyTips</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+        </div>
+    </div>
+    <!-- End Kategori Responsive -->
+
+    <!-- Buruan Pesan Responsive -->
+    <div class="container">
+        <div class="row d-block d-md-none d-lg-none d-xl-none px-3 py-4">
+            <section class="section-buruan-pesan">
+                <div id="carouselExampleSlidesOnly " class="carousel slide " data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="d-flex">
+                                    <h5 class="fw-bold" style="font-size: 18px;">Buruan Pesan</h5>
+                                    <a href="">
+                                        <i class="fa fa-arrow-right fa-lg" style="margin-left: 195px;"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item active" data-bs-interval="2000">
+                            <div class="carousel-one h-100">
+                                <div class="row mt-2">
+                                    <div class="col-6" data-aos="fade-up" data-aos-delay="100">
+                                        <a class="buruan-pesan text-decoration-none" href="#">
+                                            <div class="komponen-buruan-pesan">
+                                                <div class="overlay-gambar">
+                                                    <div class="gambar-buruan-pesan d-flex justify-content-center">
+                                                    </div>
+                                                </div>
+                                                <div class="love-1">
+                                                    <div class="icon-love">
+                                                        <i class="fa-regular fa-heart fa-xs text-white" style="margin-left: 5px; margin-top: 2px;"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="konten-produk-buruan-pesan d-flex">
+                                                    <div class="produk-buruan-pesan">
+                                                        <h4>Ramen Miso</h4>
+                                                        <p>Sunter Jakarta</p>
+                                                    </div>
+                                                    <div class="star ms-3">
+                                                        <i class="fas fa-star fa-2xs text-warning"></i>
+                                                        <i class="fas fa-star fa-2xs text-warning" style="margin-left: -3px;"></i>
+                                                        <i class="fas fa-star fa-2xs text-warning" style="margin-left: -3px;"></i>
+                                                        <i class="fas fa-star fa-2xs text-warning" style="margin-left: -3px;"></i>
+                                                        <i class="fas fa-star fa-2xs text-secondary" style="margin-left: -3px;"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="bawah-card d-flex">
+                                                        <div class="harga">
+                                                            <h5>Rp 38.000,00</h5>
+                                                            <p>HEMAT 15%</p>
+                                                        </div>
+                                                        <div class="button-detail">
+                                                            <a href="" class="btn-detail">Detail</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-6" data-aos="fade-up" data-aos-delay="100">
+                                        <a class="buruan-pesan text-decoration-none" href="#">
+                                            <div class="komponen-buruan-pesan">
+                                                <div class="overlay-gambar">
+                                                    <div class="gambar-buruan-pesan-2 d-flex justify-content-center">
+                                                    </div>
+                                                </div>
+                                                <div class="love">
+                                                    <div class="icon-love">
+                                                        <i class="fa-regular fa-heart fa-xs text-dark" style="margin-left: 5px; margin-top: 2px;"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="konten-produk-buruan-pesan d-flex">
+                                                    <div class="produk-buruan-pesan">
+                                                        <h4>Kopi Regaru</h4>
+                                                        <p>AEON Mall, Jakarta</p>
+                                                    </div>
+                                                    <div class="star ms-3">
+                                                        <i class="fas fa-star fa-2xs text-warning"></i>
+                                                        <i class="fas fa-star fa-2xs text-warning" style="margin-left: -3px;"></i>
+                                                        <i class="fas fa-star fa-2xs text-warning" style="margin-left: -3px;"></i>
+                                                        <i class="fas fa-star fa-2xs text-warning" style="margin-left: -3px;"></i>
+                                                        <i class="fas fa-star fa-2xs text-warning" style="margin-left: -3px;"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="bawah-card d-flex">
+                                                        <div class="harga">
+                                                            <h5>Rp 12.000,00</h5>
+                                                            <p>HEMAT 20RB</p>
+                                                        </div>
+                                                        <div class="button-detail">
+                                                            <a href="" class="btn-detail">Detail</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000 ">
+                            <div class="carousel-one">
+                                <div class="row mt-2">
+                                    <div class="col-6" data-aos="fade-up" data-aos-delay="100">
+                                        <a class="buruan-pesan text-decoration-none" href="#">
+                                            <div class="komponen-buruan-pesan">
+                                                <div class="overlay-gambar">
+                                                    <div class="gambar-buruan-pesan-3 d-flex justify-content-center">
+                                                    </div>
+                                                </div>
+                                                <div class="love">
+                                                    <div class="icon-love">
+                                                        <i class="fa-regular fa-heart fa-xs text-dark" style="margin-left: 5px; margin-top: 2px;"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="konten-produk-buruan-pesan d-flex">
+                                                    <div class="produk-buruan-pesan">
+                                                        <h4>Soto Ayam</h4>
+                                                        <p>Howitzer, Jakarta</p>
+                                                    </div>
+                                                    <div class="star ms-3">
+                                                        <i class="fas fa-star fa-2xs text-warning"></i>
+                                                        <i class="fas fa-star fa-2xs text-warning" style="margin-left: -3px;"></i>
+                                                        <i class="fas fa-star fa-2xs text-warning" style="margin-left: -3px;"></i>
+                                                        <i class="fas fa-star fa-2xs text-secondary" style="margin-left: -3px;"></i>
+                                                        <i class="fas fa-star fa-2xs text-secondary" style="margin-left: -3px;"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="bawah-card d-flex">
+                                                        <div class="harga">
+                                                            <h5>Rp 15.000,00</h5>
+                                                            <p>CASHBACK</p>
+                                                        </div>
+                                                        <div class="button-detail">
+                                                            <a href="" class="btn-detail">Detail</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+        </div>
+    </div>
+    <!-- End Buruan Pesan Responsive -->
+
+    <!-- Rekomendasi Responsive -->
+    <div class="container">
+        <div class="row d-block d-md-none d-lg-none d-xl-none px-3 py-4">
+            <section class="section-rekomendasi">
+                <div class="row">
+                    <div class="d-flex">
+                        <div class="col-lg-12">
+                            <h5 class="fw-bold" style="font-size: 18px;">Rekomendasi untukmu</h5>
+                        </div>
+                        <a href="">
+                            <i class="fa fa-arrow-right fa-lg" style="margin-left: 110px;"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="clearfix">
+                        <div class="col-lg-12">
+                            <div class="rekomendasi">
+                                <a href="" class="text-decoration-none">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="gambar-rekomendasi">
+                                        </div>
+                                        <div class="text-rekomendasi mt-3">
+                                            <h4>Cute Cookies</h4>
+                                            <p class="lokasi">Jakarta, Kemayoran</p>
+                                            <p class="harga">Rp 8.000,00/<span>pcs</span></p>
+                                        </div>
+                                        <div class="rating">
+                                            <div class="rating-content d-flex align-items-center">
+                                                <div class="icon-star mt-1">
+                                                    <i class="fas fa-star fa-2xs text-warning"></i>
+                                                </div>
+                                                <div class="nilai">
+                                                    <span class="ms-1">4.9</span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="rekomendasi">
+                                <a href="" class="text-decoration-none">
+                                    <div class="d-flex justify-content-between">
+                                        <div class="gambar-rekomendasi-2">
+                                        </div>
+                                        <div class="text-rekomendasi mt-3">
+                                            <h4>French Fries</h4>
+                                            <p class="lokasi">KFC Sunter, Jakarta</p>
+                                            <p class="harga">Rp 20.000,00/<span>paket</span></p>
+                                        </div>
+                                        <div class="rating">
+                                            <div class="rating-content d-flex align-items-center">
+                                                <div class="icon-star mt-1">
+                                                    <i class="fas fa-star fa-2xs text-warning"></i>
+                                                </div>
+                                                <div class="nilai">
+                                                    <span class="ms-1">4.9</span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+        </div>
+    </div>
+    <!-- End Rekomendasi Responsive -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js " integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN " crossorigin="anonymous "></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js "></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="navbar-scroll.js"></script>
+</body>
+
+</html>
